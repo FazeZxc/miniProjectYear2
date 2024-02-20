@@ -1,58 +1,69 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import FirstPage from "./components/FirstPage";
+import FirstPage from "./components/Landing";
 import SecondPage from "./components/Secondpage";
 import { Slider } from "./components/Slider";
 import { TitleWrapper } from "./components/TitleRenderer";
-import { Routes, Route, useNavigate } from "react-router";
+import { Routes, Route } from "react-router";
 import { SignUp } from "./SignUp";
 import { SignIn } from "./SignIn";
 import { AboutUs } from "./AboutUs";
 import { Syllabus } from "./Syllabus";
 import Footer from "./components/Footer";
+import { Topbar } from "./components/Topbar";
 
 function App() {
   return (
-    <div className="flex flex-col justify-center items-center w-screen g-5">
-       <div className="w-screen ">
-       <Navbar></Navbar>
-       </div>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <div className="bg-[url('./download.webp')] bg-no-repeat">
-                    
-                    <FirstPage></FirstPage>
-                  </div>
-                 
-                  <SecondPage></SecondPage>
-                </>
-              }
-            ></Route>
-            <Route
-              path="/content"
-              element={
-                <>
-                  <div className="bg-[url('./download.webp')] w-screen bg-no-repeat mb-6 pb-5">
-                  
-                  </div>
-                  <TitleWrapper></TitleWrapper>
-                </>
-              }
-            ></Route>
-            <Route path="/signup" element={<div className="flex flex-col justify-center items-center h-screen w-screen join-us">
-              <SignUp></SignUp>
-            </div>}></Route>
-            <Route path="/signin" element={<div className="flex flex-col justify-center items-center h-screen w-screen join-us">
-              <SignIn></SignIn>
+    <div className="h-screen w-dvw">
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Topbar></Topbar>
+              <div className="bg-landing bg-cover bg-no-repeat rounded-bl-full">
+                <Navbar></Navbar>
+                <FirstPage></FirstPage>
+              </div>
+              <SecondPage></SecondPage>
+              <Footer></Footer>
+            </>
+          }
+        ></Route>
+        <Route
+          path="/content"
+          element={
+            <div className="bg-[#272727] h-dvh">
+              <Navbar></Navbar>
+              <TitleWrapper></TitleWrapper>
             </div>
-            }></Route>
-            <Route path="/cs" element={<Syllabus></Syllabus>}></Route>
-            <Route path="/about" element={<AboutUs></AboutUs>}></Route>
-          </Routes>
-          <Footer></Footer>
+          }
+        ></Route>
+        <Route
+          path="/signup"
+          element={
+            <div className="bg-landing bg-cover w-vw h-vh">
+              <Navbar></Navbar>
+              <div className="flex flex-col justify-center items-center h-screen w-screen join-us">
+                <SignUp></SignUp>
+              </div>
+            </div>
+          }
+        ></Route>
+        <Route
+          path="/signin"
+          element={
+            <div className="bg-landing bg-cover w-vw h-vh">
+              <Navbar></Navbar>
+              <div className="flex flex-col justify-center items-center h-screen w-screen join-us">
+                <SignIn></SignIn>
+              </div>
+            </div>
+          }
+        ></Route>
+        <Route path="/cs" element={<Syllabus></Syllabus>}></Route>
+        <Route path="/about" element={<AboutUs></AboutUs>}></Route>
+      </Routes>
     </div>
   );
 }

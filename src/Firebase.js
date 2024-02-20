@@ -1,14 +1,15 @@
 
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth,  } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCmGLtwQdxQ5W4vkLj0pBWOBfCWI6TcS_E",
-  authDomain: "college-project-ed097.firebaseapp.com",
-  projectId: "college-project-ed097",
-  storageBucket: "college-project-ed097.appspot.com",
-  messagingSenderId: "604104163237",
-  appId: "1:604104163237:web:43f5827717614af7e1f24c"
+  apiKey: "AIzaSyBoS0ykCt6YS0ESugkUxaeJcv9FVBZ2MS0",
+  authDomain: "studyapp-95a64.firebaseapp.com",
+  projectId: "studyapp-95a64",
+  storageBucket: "studyapp-95a64.appspot.com",
+  messagingSenderId: "669968289660",
+  appId: "1:669968289660:web:55a29170ead3998f8b1ef9",
+  measurementId: "G-4NY4C9FF2K"
 };
 
 

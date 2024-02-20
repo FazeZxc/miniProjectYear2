@@ -112,7 +112,10 @@
   }
   
   
-  
+  .done:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
   
   
   
@@ -134,6 +137,4 @@
     }
   }  
 
-  .join-us{
-    background-image: url(./download.webp);
-  }
+ 

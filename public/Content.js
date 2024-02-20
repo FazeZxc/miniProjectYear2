@@ -43,7 +43,7 @@ export const subjects = [
   export const allSubjects = [
     [
       {
-        src: "https://www.youtube.com/live/2EmG3HDkH-8?si=nkjHvesUfUg_aHyp",
+        src: "https://www.youtube.com/embed/2EmG3HDkH-8?si=nkjHvesUfUg_aHyp?autoplay=1",
         title: "Fundamentals Of Probability 01",
       },
       {
